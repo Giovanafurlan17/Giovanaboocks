@@ -1,0 +1,33 @@
+.carrossel_titulo {
+    color: var(--laranja);
+    background-color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1em 0 0.5em 0;
+}
+
+.swiper-slide img {
+    width: 100%; /* Corrige o problema das imagens sobrepostas */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none; /* Remove as setas do carrossel */
+}
+
+.swiper-pagination {
+    position: initial; /* Define a posição da paginação */
+    margin: .5em 0; /* Define a margem da paginação */
+}
+
+.card__descrição {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__botões {
+    display: flex;
+    justify-content: space-between;
+}

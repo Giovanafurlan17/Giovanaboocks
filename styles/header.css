@@ -1,0 +1,138 @@
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px; /* Corrigido para adicionar unidade 'px' */
+    font-weight: 400; /* Ajustado para peso normal */
+}
+
+.carrossel_titulo {
+    color: var(--laranja);
+    background-color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1em 0 0.5em 0;
+}
+
+.banner {
+    background: var(--azul-degrade);
+    color: var(--branco);
+    text-align: center;
+    padding: 2.5em 2em;
+}
+
+.banner__titulo {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner__texto {
+    font-weight: 500;
+    margin: 1em 0;
+}
+
+.banner__pesquisa {
+    background-color: transparent;  /* Fundo transparente */
+    border: 1px solid var(--branco);  /* Borda branca */
+    color: var(--branco);  /* Cor do texto */
+    border-radius: 24px;  /* Bordas arredondadas */
+    padding: 1em;  /* Espaçamento interno */
+    width: 100%;  /* Largura total */
+}
+
+/* Estilizando o placeholder */
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal);  /* Fonte principal */
+    font-size: 14px;  /* Tamanho da fonte */
+    font-weight: 400;  /* Peso da fonte */
+    text-align: center;  /* Centraliza o texto */
+    color: var(--branco);  /* Cor do texto do placeholder */
+    background: url("../img/Lupa.svg") no-repeat;  /* Imagem da lupa */
+    background-position: 1em;  /* Posiciona a lupa */
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;     
+    position: relative;   
+}
+
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;   
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;   
+    background-position: center;
+    display: inline-block;      
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+/* Mostrar a lista quando o checkbox for marcado */
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+/* Aplica o laranja ao título "Categorias" */
+.lista-menu_titulo {
+    padding: 1em;
+    color: var(--laranja);
+    background-color: var(--branco);
+    font-weight: 700;
+}
+
+.lista-menu_item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none; /* Esconde a checkbox */
+}
+
+.swiper-slide img {
+    width: 100%; /* Corrige o problema das imagens sobrepostas */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none; /* Remove as setas do carrossel */
+}
+
+.swiper-pagination {
+    position: initial; /* Define a posição da paginação */
+    margin: .5em 0; /* Define a margem da paginação */
+}
